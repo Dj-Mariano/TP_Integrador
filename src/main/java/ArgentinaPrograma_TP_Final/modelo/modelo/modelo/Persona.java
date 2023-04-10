@@ -44,7 +44,7 @@ public class Persona {
         }
     }
 
-    public int getPuntos() {
+    private int getPuntos() {
         for(int i = 0; i < partido.size(); i++)
         {
             if(partido.get(i).Resultado(equipo.get(i))==resultado.get(i)){
@@ -53,7 +53,20 @@ public class Persona {
         }
         return puntos;
     }
-
+    private int getPartidosAcertados() {
+        int acertados = 0;
+        for(int i = 0; i < partido.size(); i++)
+        {
+            if(partido.get(i).Resultado(equipo.get(i))==resultado.get(i)){
+                acertados++;
+            }
+        }
+        return acertados;
+    }
+    public void mostrarPuntos(){
+        System.out.println("--------------------------------------------------");
+        System.out.println("La persona " + nombre + " obtuvo " + getPuntos() + " puntos y acerto " + getPartidosAcertados() + " resultados");
+    }
     public String getNombre() {
         return nombre;
     }

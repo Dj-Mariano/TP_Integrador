@@ -14,12 +14,12 @@ public class Main {
         List<Persona> personas = lectorDeArchivos.getPersonas(equipos,partidos);
 
 
-        System.out.println(personas.get(0).getPuntos());
-        System.out.println(personas.get(1).getPuntos());
-        System.out.println(personas.get(1).getPuntos());
         for(Ronda r : rondas){
             r.imprimirPartidos();
         }
 
+        for(Persona p : personas){
+            p.mostrarPuntos();
+        }
     }
 }
