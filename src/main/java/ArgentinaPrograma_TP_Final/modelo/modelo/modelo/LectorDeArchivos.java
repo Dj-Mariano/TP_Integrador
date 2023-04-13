@@ -94,7 +94,7 @@ public class LectorDeArchivos {
        }
        return partidos;
     }
-    public List<Persona> getPersonas(List<Equipo> equipos, List<Partido> partidos) {
+    public List<Persona> getPersonas(List<Partido> partidos) {
         List<Persona> personas = new ArrayList<>();
 
         CSVParser parser = null;
@@ -116,10 +116,7 @@ public class LectorDeArchivos {
                 if(posicionPersona(fila[0],personas)==-1){
                     Persona p = new Persona();
                     p.setNombre(fila[0]);
-                    p.agregarApuesta(partidos.get(c),equipos.get(posicionEquipo(fila[1],equipos)),resultado(fila[2]));
                     personas.add(p);
-                } else {
-                    personas.get(posicionPersona(fila[0],personas)).agregarApuesta(partidos.get(c),equipos.get(posicionEquipo(fila[1],equipos)),resultado(fila[2]));
                 }
                 c++;
                 if(c>=partidos.size()) {
@@ -129,6 +126,62 @@ public class LectorDeArchivos {
             throw new RuntimeException(e);
         }
         return personas;
+    }
+    public List<Pronostico> getPronosticos(List<Equipo> equipos, List<Partido> partidos, List<Persona> personas) {
+        List<Pronostico> pronosticos = new ArrayList<>();
+
+        CSVParser parser = null;
+        CSVReader lector = null;
+
+        try {
+            parser = new CSVParserBuilder()
+                    .withSeparator(';')
+                    .build();
+            lector = new CSVReaderBuilder(new FileReader(this.rutaPronosticos))
+                    .withCSVParser(parser)
+                    .withSkipLines(1)
+                    .build();
+
+            String[] fila;
+            int c = 0;
+            int n = 0;
+            while ((fila = lector.readNext()) != null) {
+                Pronostico p = new Pronostico();
+                p.setPersona(personas.get(posicionPersona(fila[0],personas)));
+                p.setEquipo(equipos.get(posicionEquipo(fila[1],equipos)));
+                p.setPartido(partidos.get(c));
+                if((fila[2].equals("X"))&&(fila[3].equals(""))&&(fila[4].equals(""))) {
+                    p.setResultadoEnum(ResultadoEnum.GANADOR);
+                } else if ((fila[2].equals(""))&&(fila[3].equals(""))&&(fila[4].equals("X"))) {
+                    p.setResultadoEnum(ResultadoEnum.PERDEDOR);
+                } else if ((fila[2].equals(""))&&(fila[3].equals("X"))&&(fila[4].equals(""))){
+                    p.setResultadoEnum(ResultadoEnum.EMPATE);
+                } else {
+                    System.out.println("Error al crear el pronostico");
+                }
+                pronosticos.add(p);
+                Pronostico p1 = new Pronostico();
+                p1.setPersona(personas.get(posicionPersona(fila[0],personas)));
+                p1.setEquipo(equipos.get(posicionEquipo(fila[5],equipos)));
+                p1.setPartido(partidos.get(c));
+                if((fila[2].equals("X"))&&(fila[3].equals(""))&&(fila[4].equals(""))) {
+                    p1.setResultadoEnum(ResultadoEnum.PERDEDOR);
+                } else if ((fila[2].equals(""))&&(fila[3].equals(""))&&(fila[4].equals("X"))) {
+                    p1.setResultadoEnum(ResultadoEnum.GANADOR);
+                } else if ((fila[2].equals(""))&&(fila[3].equals("X"))&&(fila[4].equals(""))){
+                    p1.setResultadoEnum(ResultadoEnum.EMPATE);
+                } else {
+                    System.out.println("Error al crear el pronostico");
+                }
+                pronosticos.add(p1);
+                c++;
+                if(c>=partidos.size()) {
+                    c=0;}
+            }
+        } catch(CsvValidationException | IOException e){
+            throw new RuntimeException(e);
+        }
+        return pronosticos;
     }
     public List<Ronda> getRondas(List<Partido> partidos) {
         List<Ronda> rondas = new ArrayList<>();
@@ -226,5 +279,6 @@ public class LectorDeArchivos {
             return ResultadoEnum.NO_PARTICIPO;
         }
     }
+
 
 }

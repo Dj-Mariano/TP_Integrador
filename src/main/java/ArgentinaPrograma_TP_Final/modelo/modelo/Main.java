@@ -1,7 +1,5 @@
 package ArgentinaPrograma_TP_Final.modelo.modelo;
-
 import ArgentinaPrograma_TP_Final.modelo.modelo.modelo.*;
-
 import java.util.List;
 
 public class Main {
@@ -11,15 +9,20 @@ public class Main {
         List<Equipo> equipos = lectorDeArchivos.getEquipos();
         List<Partido> partidos = lectorDeArchivos.getPartidos(equipos);
         List<Ronda> rondas = lectorDeArchivos.getRondas(partidos);
-        List<Persona> personas = lectorDeArchivos.getPersonas(equipos,partidos);
+        List<Persona> personas = lectorDeArchivos.getPersonas(partidos);
+        List<Pronostico> pronosticos = lectorDeArchivos.getPronosticos(equipos,partidos,personas);
 
+        //calculo puntos
+
+        for(Pronostico p1 : pronosticos){
+            p1.puntos();
+            p1.imprimirPronostico();
+        }
 
         for(Ronda r : rondas){
             r.imprimirPartidos();
         }
-
-        for(Persona p : personas){
-            p.mostrarPuntos();
-        }
+        System.out.println(personas.get(0).getPuntos());
+        System.out.println(personas.get(1).getPuntos());
     }
 }

@@ -6,24 +6,17 @@ import java.util.List;
 public class Ronda {
     private String numeroRonda;
     private List<Partido> partidos;
-    private List<Persona> persona;
 
     public Ronda(String numeroRonda){
         this.numeroRonda = numeroRonda;
         this.partidos = new ArrayList<>();
-        this.persona = new ArrayList<>();
     }
 
     public String getNumeroRonda() {
         return numeroRonda;
     }
-
     public void setPartidos(List<Partido> partidos) {
         this.partidos = partidos;
-    }
-
-    public void setPersona(List<Persona> persona) {
-        this.persona = persona;
     }
     public void imprimirPartidos(){
         System.out.println("--------------------------------------------------");

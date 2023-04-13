@@ -8,7 +8,6 @@ public class Equipo {
         this.nombreEquipo = nombreEquipo;
         this.descripcion = descripcion;
     }
-
     public String getNombreEquipo() {
         return nombreEquipo;
     }

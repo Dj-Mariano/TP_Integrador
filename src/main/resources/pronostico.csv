@@ -1,13 +1,15 @@
-﻿Persona;Equipo;Resultado
-Mariana;Argentina;GANADOR
-Mariana;Polonia;EMPATE
-Mariana;Mexico;PERDEDOR
-Mariana;Arabia Saudita;PERDEDOR
-Mariana;Paises Bajos;PERDEDOR
-Mariana;Croacia;PERDEDOR
-Pedro;Argentina;GANADOR
-Pedro;Mexico;GANADOR
-Pedro;Mexico;PERDEDOR
-Pedro;Polonia;EMPATE
-Pedro;Paises Bajos;GANADOR
-Pedro;Croacia;GANADOR
+﻿Persona;Equipo 1;Gana 1;Empata;Gana 2;Equipo 2
+Mariana;Argentina;X;;;Arabia Saudita
+Mariana;Polonia;;X;;Mexico
+Mariana;Argentina;X;;;Mexico
+Mariana;Arabia Saudita;;;X;Polonia
+Mariana;Paises Bajos;;;X;Argentina
+Mariana;Croacia;;;X;Brasil
+Mariana;Peru;X;;;Francia
+Pedro;Argentina;X;;;Arabia Saudita
+Pedro;Polonia;;;X;Mexico
+Pedro;Argentina;X;;;Mexico
+Pedro;Arabia Saudita;;X;;Polonia
+Pedro;Paises Bajos;X;;;Argentina
+Pedro;Croacia;X;;;Brasil
+Pedro;Peru;;;X;Francia

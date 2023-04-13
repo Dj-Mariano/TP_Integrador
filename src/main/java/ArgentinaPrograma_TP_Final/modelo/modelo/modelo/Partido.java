@@ -12,11 +12,9 @@ public class Partido {
     protected void setEquipo1(Equipo equipo1) {
         this.equipo1 = equipo1;
     }
-
     protected void setEquipo2(Equipo equipo2) {
         this.equipo2 = equipo2;
     }
-
     protected void setRonda(String ronda) {
         this.ronda = ronda;
     }
@@ -24,21 +22,19 @@ public class Partido {
     public String getRonda() {
         return ronda;
     }
-
     public Equipo getEquipo1() {
         return equipo1;
     }
-
     public Equipo getEquipo2() {
         return equipo2;
     }
 
-    //Verificar que los goles sea un num entero
+    //Verificar que los goles sea un num entero y > 0
     protected void agregarGoles(int golesEquipo1, int golesEquipo2){
-        if((golesEquipo1%1)==0){
+        if(((golesEquipo1%1)==0) && (golesEquipo1>=0)){
             this.golesEquipo1=golesEquipo1;
         }
-        if((golesEquipo2%1)==0){
+        if(((golesEquipo2%1)==0) && (golesEquipo2>=0)){
             this.golesEquipo2=golesEquipo2;
         }
     }
