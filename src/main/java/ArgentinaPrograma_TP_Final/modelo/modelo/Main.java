@@ -8,8 +8,8 @@ public class Main {
         LectorDeArchivos lectorDeArchivos = new LectorDeArchivos("C:\\Users\\maria\\OneDrive\\DOCUMENTOS MARIANO\\B-JAVA UTN\\TP Integrador\\TP_Integrador\\src\\main\\resources\\pronostico.csv","C:\\Users\\maria\\OneDrive\\DOCUMENTOS MARIANO\\B-JAVA UTN\\TP Integrador\\TP_Integrador\\src\\main\\resources\\resultados.csv");
         List<Equipo> equipos = lectorDeArchivos.getEquipos();
         List<Partido> partidos = lectorDeArchivos.getPartidos(equipos);
-        List<Ronda> rondas = lectorDeArchivos.getRondas(partidos);
         List<Persona> personas = lectorDeArchivos.getPersonas(partidos);
+        List<Ronda> rondas = lectorDeArchivos.getRondas(partidos);
         List<Pronostico> pronosticos = lectorDeArchivos.getPronosticos(equipos,partidos,personas);
 
         //calculo puntos
@@ -22,7 +22,7 @@ public class Main {
         for(Ronda r : rondas){
             r.imprimirPartidos();
         }
-        System.out.println(personas.get(0).getPuntos());
-        System.out.println(personas.get(1).getPuntos());
+        System.out.println(Math.round(personas.get(0).getPuntos()));
+        System.out.println(Math.round(personas.get(1).getPuntos()));
     }
 }

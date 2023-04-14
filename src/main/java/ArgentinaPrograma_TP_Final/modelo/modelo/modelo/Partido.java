@@ -1,5 +1,7 @@
 package ArgentinaPrograma_TP_Final.modelo.modelo.modelo;
 
+import excepciones.ValorGolesException;
+
 public class Partido {
     private Equipo equipo1;
     private Equipo equipo2;
@@ -33,9 +35,13 @@ public class Partido {
     protected void agregarGoles(int golesEquipo1, int golesEquipo2){
         if(((golesEquipo1%1)==0) && (golesEquipo1>=0)){
             this.golesEquipo1=golesEquipo1;
+        } else {
+            throw new ValorGolesException(golesEquipo1, equipo1.getNombreEquipo());
         }
         if(((golesEquipo2%1)==0) && (golesEquipo2>=0)){
             this.golesEquipo2=golesEquipo2;
+        } else {
+            throw new ValorGolesException(golesEquipo2, equipo2.getNombreEquipo());
         }
     }
     public ResultadoEnum Resultado(Equipo equipo) {

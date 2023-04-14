@@ -1,5 +1,7 @@
 package ArgentinaPrograma_TP_Final.modelo.modelo.modelo;
 
+import excepciones.EquipoIncorrectoException;
+
 public class Pronostico {
     private Persona persona;
     private Partido partido;
@@ -15,8 +17,12 @@ public class Pronostico {
     protected void setPartido(Partido partido) {
         this.partido = partido;
     }
-    protected void setEquipo(Equipo equipo) {
-        this.equipo = equipo;
+    protected void setEquipo(Equipo equipo, Partido partido) {
+        if((partido.getEquipo1().getNombreEquipo().equals(equipo.getNombreEquipo()))||(partido.getEquipo2().getNombreEquipo().equals(equipo.getNombreEquipo()))){
+            this.equipo = equipo;
+        } else{
+            throw new EquipoIncorrectoException(equipo);
+        }
     }
     protected void setResultadoEnum(ResultadoEnum resultadoEnum) {
         this.resultadoEnum = resultadoEnum;

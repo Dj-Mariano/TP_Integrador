@@ -54,45 +54,45 @@ public class LectorDeArchivos {
         } catch(CsvValidationException | IOException e){
             throw new RuntimeException(e);
         }
-            return equipos;
-        }
+        return equipos;
+    }
     public List<Partido> getPartidos(List<Equipo> equipos) {
-       List<Partido> partidos = new ArrayList<>();
+        List<Partido> partidos = new ArrayList<>();
 
-       CSVParser parser = null;
-       CSVReader lector = null;
+        CSVParser parser = null;
+        CSVReader lector = null;
 
-       try {
-           parser = new CSVParserBuilder()
-                   .withSeparator(';')
-                   .build();
-           lector = new CSVReaderBuilder(new FileReader(this.rutaResultados))
-                   .withCSVParser(parser)
-                   .withSkipLines(1)
-                   .build();
+        try {
+            parser = new CSVParserBuilder()
+                    .withSeparator(';')
+                    .build();
+            lector = new CSVReaderBuilder(new FileReader(this.rutaResultados))
+                    .withCSVParser(parser)
+                    .withSkipLines(1)
+                    .build();
 
-           String[] fila;
+            String[] fila;
 
-           while ((fila = lector.readNext()) != null) {
-               Partido p = new Partido();
-               for(Equipo e : equipos) {
-                   if (e.getNombreEquipo().equals(fila[1])){
-                       p.setEquipo1(e);
-                   }
-               }
-               for(Equipo e : equipos) {
-                   if (e.getNombreEquipo().equals(fila[4])){
-                       p.setEquipo2(e);
-                   }
-               }
-               p.agregarGoles(Integer.parseInt(fila[2]),Integer.parseInt(fila[3]));
-               p.setRonda(fila[0]);
-               partidos.add(p);
-           }
-       } catch(CsvValidationException | IOException e){
-           throw new RuntimeException(e);
-       }
-       return partidos;
+            while ((fila = lector.readNext()) != null) {
+                Partido p = new Partido();
+                for(Equipo e : equipos) {
+                    if (e.getNombreEquipo().equals(fila[1])){
+                        p.setEquipo1(e);
+                    }
+                }
+                for(Equipo e : equipos) {
+                    if (e.getNombreEquipo().equals(fila[4])){
+                        p.setEquipo2(e);
+                    }
+                }
+                p.agregarGoles(Integer.parseInt(fila[2]),Integer.parseInt(fila[3]));
+                p.setRonda(fila[0]);
+                partidos.add(p);
+            }
+        } catch(CsvValidationException | IOException e){
+            throw new RuntimeException(e);
+        }
+        return partidos;
     }
     public List<Persona> getPersonas(List<Partido> partidos) {
         List<Persona> personas = new ArrayList<>();
@@ -148,8 +148,8 @@ public class LectorDeArchivos {
             while ((fila = lector.readNext()) != null) {
                 Pronostico p = new Pronostico();
                 p.setPersona(personas.get(posicionPersona(fila[0],personas)));
-                p.setEquipo(equipos.get(posicionEquipo(fila[1],equipos)));
                 p.setPartido(partidos.get(c));
+                p.setEquipo(equipos.get(posicionEquipo(fila[1],equipos)),partidos.get(c));
                 if((fila[2].equals("X"))&&(fila[3].equals(""))&&(fila[4].equals(""))) {
                     p.setResultadoEnum(ResultadoEnum.GANADOR);
                 } else if ((fila[2].equals(""))&&(fila[3].equals(""))&&(fila[4].equals("X"))) {
@@ -162,8 +162,8 @@ public class LectorDeArchivos {
                 pronosticos.add(p);
                 Pronostico p1 = new Pronostico();
                 p1.setPersona(personas.get(posicionPersona(fila[0],personas)));
-                p1.setEquipo(equipos.get(posicionEquipo(fila[5],equipos)));
                 p1.setPartido(partidos.get(c));
+                p1.setEquipo(equipos.get(posicionEquipo(fila[5],equipos)),partidos.get(c));
                 if((fila[2].equals("X"))&&(fila[3].equals(""))&&(fila[4].equals(""))) {
                     p1.setResultadoEnum(ResultadoEnum.PERDEDOR);
                 } else if ((fila[2].equals(""))&&(fila[3].equals(""))&&(fila[4].equals("X"))) {
@@ -221,7 +221,7 @@ public class LectorDeArchivos {
         return rondas;
     }
     private boolean buscarEquipo(String equipo, List<Equipo> listEquipos){
-    int cont = 0;
+        int cont = 0;
         for(Equipo e : listEquipos) {
             if (e.getNombreEquipo().equals(equipo)){
                 break;
