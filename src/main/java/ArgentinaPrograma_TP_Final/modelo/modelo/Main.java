@@ -5,6 +5,7 @@ import java.sql.SQLOutput;
 import java.util.List;
 
 public class Main {
+
     public static void main(String[] args) {
 
         LectorDeArchivos lectorDeArchivos = new LectorDeArchivos("src\\main\\resources\\pronostico.csv","src\\main\\resources\\resultados.csv");

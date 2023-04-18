@@ -11,6 +11,13 @@ public class Pronostico {
     public Pronostico() {
     }
 
+    public Pronostico(Persona pers, Partido part, Equipo equi, ResultadoEnum resultadoEnum){
+        this.persona=pers;
+        this.partido=part;
+        this.equipo=equi;
+        this.resultadoEnum=resultadoEnum;
+    }
+
     protected void setPersona(Persona persona) {
         this.persona = persona;
     }
