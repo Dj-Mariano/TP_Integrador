@@ -29,7 +29,7 @@ public class Pronostico {
     }
     public void imprimirPronostico(){
         System.out.println("--------------------------------------------------");
-        System.out.println("El ponostico de " +persona.getNombre() + " para el partido de " + partido.getEquipo1().getNombreEquipo() + " contra " + partido.getEquipo2().getNombreEquipo() + " es:");
+        System.out.println("El pronóstico de " +persona.getNombre() + " para el partido de " + partido.getEquipo1().getNombreEquipo() + " contra " + partido.getEquipo2().getNombreEquipo() + " es:");
         System.out.println(equipo.getNombreEquipo() + " " + resultadoEnum);
     }
 

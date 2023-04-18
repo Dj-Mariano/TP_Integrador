@@ -11,6 +11,12 @@ public class Partido {
 
     public Partido(){
     }
+    public Partido(Equipo equipo1, Equipo equipo2, int golesEquipo1, int golesEquipo2){
+        this.equipo1=equipo1;
+        this.equipo2=equipo2;
+        this.golesEquipo1=golesEquipo1;
+        this.golesEquipo2=golesEquipo2;
+    }
     protected void setEquipo1(Equipo equipo1) {
         this.equipo1 = equipo1;
     }
