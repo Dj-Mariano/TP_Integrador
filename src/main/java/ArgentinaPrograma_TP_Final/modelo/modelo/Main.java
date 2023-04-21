@@ -19,7 +19,7 @@ public class Main {
 
 
         for(Pronostico p1 : pronosticos){
-            p1.puntos();
+            p1.Calcularpuntos();
             p1.imprimirPronostico();
         }
 
@@ -27,7 +27,7 @@ public class Main {
             r.imprimirPartidos();
         }
 
-        Persona.devolverPuntos(personas.get(0));
-        Persona.devolverPuntos(personas.get(1));
+        Persona.imprimirPuntaje(personas.get(0));
+        Persona.imprimirPuntaje(personas.get(1));
     }
 }

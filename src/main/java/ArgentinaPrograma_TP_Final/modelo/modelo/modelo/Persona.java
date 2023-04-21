@@ -21,7 +21,7 @@ public class Persona {
         return puntos;
     }
 
-    public static void devolverPuntos(Persona pers){
+    public static void imprimirPuntaje(Persona pers){
         System.out.println("--------------------------------------------------");
         System.out.println( "El pronóstico de "+ pers.getNombre() +" ha obtenido "+ pers.getPuntos()+ " puntos." );
     }

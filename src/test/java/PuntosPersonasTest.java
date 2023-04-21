@@ -14,8 +14,8 @@ public class PuntosPersonasTest {
         Partido partido1  = new Partido(equipo1,equipo2,2,1);
         Pronostico pronostico1 = new Pronostico(persona1, partido1, equipo2, ResultadoEnum.PERDEDOR);
         Pronostico pronostico2= new Pronostico(persona1, partido1, equipo1, ResultadoEnum.GANADOR);
-        pronostico1.puntos();
-        pronostico2.puntos();
+        pronostico1.Calcularpuntos();
+        pronostico2.Calcularpuntos();
         assertEquals(1, persona1.getPuntos(), 0.01);
     }
 }

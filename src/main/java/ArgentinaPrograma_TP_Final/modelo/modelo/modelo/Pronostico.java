@@ -40,7 +40,7 @@ public class Pronostico {
         System.out.println(equipo.getNombreEquipo() + " " + resultadoEnum);
     }
 
-    public void puntos(){
+    public void Calcularpuntos(){
         double cant = 0.5;
         if(partido.Resultado(equipo)==resultadoEnum){
             persona.addPuntos(cant);

@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="028749ad-d6fd-47c6-a625-25e4cabe5c64" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ArgentinaPrograma_TP_Final/modelo/modelo/modelo/GestorDB.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ArgentinaPrograma_TP_Final/modelo/modelo/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ArgentinaPrograma_TP_Final/modelo/modelo/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ArgentinaPrograma_TP_Final/modelo/modelo/modelo/Persona.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ArgentinaPrograma_TP_Final/modelo/modelo/modelo/Persona.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ArgentinaPrograma_TP_Final/modelo/modelo/modelo/Pronostico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ArgentinaPrograma_TP_Final/modelo/modelo/modelo/Pronostico.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/PuntosPersonasTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PuntosPersonasTest.java" afterDir="false" />
     </list>
@@ -46,7 +48,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="JUnit.PuntosPersonasTest.ProbarPuntos">
+  <component name="RunManager">
     <configuration name="PartidosTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TP_Integrador" />
       <option name="PACKAGE_NAME" value="" />
@@ -109,9 +111,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.PartidosTest" />
         <item itemvalue="JUnit.PuntosPersonasTest.ProbarPuntos" />
         <item itemvalue="JUnit.PartidosTest.probarResultadoEmpate" />
-        <item itemvalue="JUnit.PartidosTest" />
         <item itemvalue="JUnit.PartidosTest.probarResultadoGanador1" />
         <item itemvalue="JUnit.PartidosTest.probarResultadoPerdedor2" />
       </list>
