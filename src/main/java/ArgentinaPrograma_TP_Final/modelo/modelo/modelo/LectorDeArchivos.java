@@ -5,6 +5,8 @@ import com.opencsv.CSVParserBuilder;
 import com.opencsv.CSVReader;
 import com.opencsv.CSVReaderBuilder;
 import com.opencsv.exceptions.CsvValidationException;
+import excepciones.EquipoYaExistenteException;
+import excepciones.RondaNoExistenteException;
 
 import java.io.FileReader;
 import java.io.IOException;
@@ -38,15 +40,13 @@ public class LectorDeArchivos {
             String[] fila;
 
             while ((fila = lector.readNext()) != null) {
-                if (buscarEquipo(fila[1],equipos)==true) {
-                    //System.out.println("Equipo ya existente");
-                } else {
+                if (buscarEquipo(fila[1],equipos)==true) throw new EquipoYaExistenteException(fila[1]);
+                else {
                     Equipo equipo = new Equipo(fila[1], "Vacio");
                     equipos.add(equipo);
                 }
-                if (buscarEquipo(fila[4],equipos)==true) {
-                    //System.out.println("Equipo ya existente");
-                } else {
+                if (buscarEquipo(fila[4],equipos)==true) throw new EquipoYaExistenteException(fila[1]);
+                else {
                     Equipo equipo = new Equipo(fila[4], "Vacio");
                     equipos.add(equipo);
                 }
@@ -183,8 +183,10 @@ public class LectorDeArchivos {
         }
         return pronosticos;
     }
+
+    List<Ronda> rondas;
     public List<Ronda> getRondas(List<Partido> partidos) {
-        List<Ronda> rondas = new ArrayList<>();
+        rondas = new ArrayList<>();
 
         CSVParser parser = null;
         CSVReader lector = null;
@@ -205,7 +207,7 @@ public class LectorDeArchivos {
                     //((System.out.println("Ronda Existente");
                 } else {
                     List<Partido> aux = new ArrayList<>();
-                    Ronda ronda = new Ronda(fila[0]);
+                    Ronda ronda = new Ronda(Integer.parseInt(fila[0]));
                     for(int i=0;i<partidos.size();i++)
                     {
                         if(partidos.get(i).getRonda().equals(fila[0]))
@@ -236,7 +238,7 @@ public class LectorDeArchivos {
     private boolean buscarRonda(String nombreRonda, List<Ronda> listRonda){
         int cont = 0;
         for(Ronda r : listRonda) {
-            if (r.getNumeroRonda().equals(nombreRonda)){
+            if (String.valueOf(r.getNumeroRonda()).equals(nombreRonda)){
                 break;
             } else{
                 cont++;}
@@ -279,6 +281,18 @@ public class LectorDeArchivos {
             return ResultadoEnum.NO_PARTICIPO;
         }
     }
+    public Ronda obtenerRonda(int numeroRonda){
+        Ronda ronda= null;
 
+        for (Ronda r : this.rondas){
+            if(r.getNumeroRonda()==numeroRonda){
+                ronda=r;
+            }
+            if(ronda == null){
+                throw new RondaNoExistenteException(numeroRonda);
+            }
+        }
+        return ronda;
+    }
 
 }

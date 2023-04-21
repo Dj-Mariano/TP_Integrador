@@ -5,12 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="028749ad-d6fd-47c6-a625-25e4cabe5c64" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ArgentinaPrograma_TP_Final/modelo/modelo/modelo/GestorDB.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/excepciones/EquipoYaExistenteException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/excepciones/RondaNoExistenteException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ArgentinaPrograma_TP_Final/modelo/modelo/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ArgentinaPrograma_TP_Final/modelo/modelo/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ArgentinaPrograma_TP_Final/modelo/modelo/modelo/Persona.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ArgentinaPrograma_TP_Final/modelo/modelo/modelo/Persona.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ArgentinaPrograma_TP_Final/modelo/modelo/modelo/Pronostico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ArgentinaPrograma_TP_Final/modelo/modelo/modelo/Pronostico.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/PuntosPersonasTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PuntosPersonasTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ArgentinaPrograma_TP_Final/modelo/modelo/modelo/Fase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ArgentinaPrograma_TP_Final/modelo/modelo/modelo/Fase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ArgentinaPrograma_TP_Final/modelo/modelo/modelo/GestorDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ArgentinaPrograma_TP_Final/modelo/modelo/modelo/GestorDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ArgentinaPrograma_TP_Final/modelo/modelo/modelo/LectorDeArchivos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ArgentinaPrograma_TP_Final/modelo/modelo/modelo/LectorDeArchivos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ArgentinaPrograma_TP_Final/modelo/modelo/modelo/Partido.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ArgentinaPrograma_TP_Final/modelo/modelo/modelo/Partido.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ArgentinaPrograma_TP_Final/modelo/modelo/modelo/Ronda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ArgentinaPrograma_TP_Final/modelo/modelo/modelo/Ronda.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/excepciones/EquipoIncorrectoException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/excepciones/EquipoIncorrectoException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/excepciones/ValorGolesException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/excepciones/ValorGolesException.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

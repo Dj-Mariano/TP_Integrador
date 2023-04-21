@@ -1,5 +1,6 @@
 package ArgentinaPrograma_TP_Final.modelo.modelo.modelo;
 
+import excepciones.EquipoIncorrectoException;
 import excepciones.ValorGolesException;
 
 public class Partido {
@@ -70,8 +71,7 @@ public class Partido {
             }
         }
         else{
-            //System.out.println("El equipo " + equipo + " no jugo este partido");
-            return ResultadoEnum.NO_PARTICIPO;
+            throw new EquipoIncorrectoException(equipo);
         }
     }
 }

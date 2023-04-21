@@ -6,13 +6,21 @@ import java.util.List;
 
 public class GestorDB {
 
-//    private String db;
-//    private String user;
-//    private String pass;
-//    Connection con;
-//    Statement stmt;
-//    List<Pronostico> Pronosticos;
-//
+    private String db;
+    private String user;
+    private String pass;
+    Connection con;
+    Statement stmt;
+    private List<Pronostico> Pronosticos;
+    private List<Persona> Personas;
+    private LectorDeArchivos lectorDeArchivos;
+
+    public GestorDB(LectorDeArchivos lectorDeArchivos) {
+        this.lectorDeArchivos=lectorDeArchivos;
+        this.Pronosticos=new ArrayList<>();
+        this.Personas= new ArrayList<>();
+    }
+
 //    public GestorDB(String db, String user, String pass){
 //        this.db=db;
 //        this.user=user;
@@ -43,4 +51,23 @@ public class GestorDB {
 //            throw new RuntimeException(e);
 //        }
 //    }
+
+    public void levantarPronosticos() {
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            con = DriverManager.getConnection(this.db, this.user, this.pass);
+            stmt = con.createStatement();
+            ResultSet res = stmt.executeQuery("select * from pronosticos");
+
+            while(res.next()){
+//                Ronda ronda= LectorDeArchivos.obtenerRonda();
+            }
+
+            con.close();
+        } catch (ClassNotFoundException | SQLException e) {
+            throw new RuntimeException(e);
+
+        }
+    }
+
 }
