@@ -28,5 +28,18 @@ public class Ronda {
             System.out.println("Equipo 1: " + p.getEquipo1().getNombreEquipo() + " - Equipo 2: " + p.getEquipo2().getNombreEquipo());
         }
     }
+    public Partido obtenerPartido(String equipo1, String equipo2) {
+        Partido partido = null;
 
+        for(partido p : this.partidos){
+           if(p.juegan(equipo1,equipo2)){
+               partido = p;
+           }
+        }
+
+        if(partido == null){
+            throw new RuntimeException("El partido no existe");
+        }
+        return partido;
+    }
 }
