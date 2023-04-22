@@ -5,7 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="028749ad-d6fd-47c6-a625-25e4cabe5c64" name="Changes" comment="">
+<<<<<<< HEAD
       <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+=======
+      <change afterPath="$PROJECT_DIR$/src/main/java/excepciones/EquipoYaExistenteException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/excepciones/RondaNoExistenteException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ArgentinaPrograma_TP_Final/modelo/modelo/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ArgentinaPrograma_TP_Final/modelo/modelo/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ArgentinaPrograma_TP_Final/modelo/modelo/modelo/Fase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ArgentinaPrograma_TP_Final/modelo/modelo/modelo/Fase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ArgentinaPrograma_TP_Final/modelo/modelo/modelo/GestorDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ArgentinaPrograma_TP_Final/modelo/modelo/modelo/GestorDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ArgentinaPrograma_TP_Final/modelo/modelo/modelo/LectorDeArchivos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ArgentinaPrograma_TP_Final/modelo/modelo/modelo/LectorDeArchivos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ArgentinaPrograma_TP_Final/modelo/modelo/modelo/Partido.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ArgentinaPrograma_TP_Final/modelo/modelo/modelo/Partido.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ArgentinaPrograma_TP_Final/modelo/modelo/modelo/Ronda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ArgentinaPrograma_TP_Final/modelo/modelo/modelo/Ronda.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/excepciones/EquipoIncorrectoException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/excepciones/EquipoIncorrectoException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/excepciones/ValorGolesException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/excepciones/ValorGolesException.java" afterDir="false" />
+>>>>>>> origin/master
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +58,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
   }
 }</component>
+<<<<<<< HEAD
   <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ArgentinaPrograma_TP_Final.modelo.modelo.Main" />
@@ -57,6 +73,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+=======
+  <component name="RunManager">
+>>>>>>> origin/master
     <configuration name="PartidosTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TP_Integrador" />
       <option name="PACKAGE_NAME" value="" />
@@ -86,6 +105,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+<<<<<<< HEAD
+=======
+    <configuration name="PartidosTest.probarResultadoPerdedor2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TP_Integrador" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="PartidosTest" />
+      <option name="METHOD_NAME" value="probarResultadoPerdedor2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+>>>>>>> origin/master
     <configuration name="PuntosPersonasTest.ProbarPuntos" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="TP_Integrador" />
       <option name="PACKAGE_NAME" value="" />
@@ -109,11 +141,18 @@
     </configuration>
     <recent_temporary>
       <list>
+<<<<<<< HEAD
         <item itemvalue="Application.Main" />
+=======
+>>>>>>> origin/master
         <item itemvalue="JUnit.PartidosTest" />
         <item itemvalue="JUnit.PuntosPersonasTest.ProbarPuntos" />
         <item itemvalue="JUnit.PartidosTest.probarResultadoEmpate" />
         <item itemvalue="JUnit.PartidosTest.probarResultadoGanador1" />
+<<<<<<< HEAD
+=======
+        <item itemvalue="JUnit.PartidosTest.probarResultadoPerdedor2" />
+>>>>>>> origin/master
       </list>
     </recent_temporary>
   </component>
