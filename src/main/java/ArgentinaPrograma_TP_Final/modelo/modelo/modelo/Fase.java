@@ -14,4 +14,18 @@ public class Fase {
     public int getNumeroFase() {
         return numeroFase;
     }
+
+    public Ronda obtenerRonda(int ronda) {
+        Ronda ronda = null;
+
+        for(Ronda r : this.rondas){
+            if(r.getNumeroRonda() == numeroFase){
+                ronda = r;
+            }
+        }
+        if(ronda == null){
+            throw new RuntimeException("La ronda no existe");
+        }
+        return ronda;
+    }
 }

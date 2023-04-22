@@ -18,6 +18,9 @@ public class Partido {
         this.golesEquipo1=golesEquipo1;
         this.golesEquipo2=golesEquipo2;
     }
+    public boolean juegan(String equipo1, String equipo2){
+
+    }
     protected void setEquipo1(Equipo equipo1) {
         this.equipo1 = equipo1;
     }
@@ -27,7 +30,6 @@ public class Partido {
     protected void setRonda(String ronda) {
         this.ronda = ronda;
     }
-
     public String getRonda() {
         return ronda;
     }

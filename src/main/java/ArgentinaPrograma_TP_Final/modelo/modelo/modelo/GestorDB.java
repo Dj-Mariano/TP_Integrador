@@ -1,5 +1,4 @@
 package ArgentinaPrograma_TP_Final.modelo.modelo.modelo;
-
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -12,13 +11,13 @@ public class GestorDB {
     Connection con;
     Statement stmt;
     private List<Pronostico> Pronosticos;
-    private List<Persona> Personas;
+    private List<Persona> personas;
     private LectorDeArchivos lectorDeArchivos;
 
     public GestorDB(LectorDeArchivos lectorDeArchivos) {
         this.lectorDeArchivos=lectorDeArchivos;
         this.Pronosticos=new ArrayList<>();
-        this.Personas= new ArrayList<>();
+        this.personas= new ArrayList<>();
     }
 
 //    public GestorDB(String db, String user, String pass){
@@ -57,9 +56,17 @@ public class GestorDB {
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(this.db, this.user, this.pass);
             stmt = con.createStatement();
-            ResultSet res = stmt.executeQuery("select * from pronosticos");
+            ResultSet res = stmt.executeQuery("select * from pronostico");
 
             while(res.next()){
+
+                //Instancio pronostico
+                Fase fase = LectorDeArchivos.obtenerFase(res.getInt("fase"));
+                Ronda ronda = fase.obtenerRonda(res.getInt("ronda"));
+                Persona persona = this.obtenerPersona(res.getString("persona"));
+                Partido partido = ronda.obtenerPartido(res.getString("equipo_1"),res.getString("equipo_2"));
+                //Agrego el pronostico a la lista
+
 //                Ronda ronda= LectorDeArchivos.obtenerRonda();
             }
 
@@ -68,6 +75,22 @@ public class GestorDB {
             throw new RuntimeException(e);
 
         }
+    }
+
+    private Persona obtenerPersona(String nombrePersona) {
+        Persona persona = null;
+
+        for(Persona p : this.personas){
+            if(p.getNombre().equals(nombrePersona)){
+                persona = p;
+            }
+        }
+        if(persona == null){
+            persona = new Persona();
+            persona.setNombre(nombrePersona);
+            this.personas.add(persona);
+        }
+        return persona;
     }
 
 }
