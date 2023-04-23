@@ -15,7 +15,7 @@ public class Main {
         List<Ronda> rondas = lectorDeArchivos.getRondas(partidos);
         List<Pronostico> pronosticos = lectorDeArchivos.getPronosticos(equipos,partidos,personas);
 
-       GestorDB DB = new GestorDB(LectorDeArchivos);
+//        GestorDB DB = new GestorDB(LectorDeArchivos);
 
         //calculo puntos
 
