@@ -25,9 +25,8 @@ public class Pronostico {
     public Persona getPersona() {
         return persona;
     }
-    public Partido getPartido() {
-        return partido;
+    public boolean pronosticoAcertado(){
+        return this.partido.getResultado().equals(this.resultadoEnum);
     }
-
 
 }

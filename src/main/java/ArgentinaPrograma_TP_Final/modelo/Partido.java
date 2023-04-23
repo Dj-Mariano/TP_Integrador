@@ -39,7 +39,6 @@ public class Partido {
     public Equipo getEquipo2() {
         return equipo2;
     }
-
     //Verificar que los goles sea un num entero y > 0
     protected void agregarGoles(int golesEquipo1, int golesEquipo2){
         if(((golesEquipo1%1)==0) && (golesEquipo1>=0)){
@@ -53,28 +52,13 @@ public class Partido {
             throw new ValorGolesException(golesEquipo2, equipo2.getNombreEquipo());
         }
     }
-
-//    public ResultadoEnum Resultado(Equipo equipo) {
-//        if (equipo.getNombreEquipo().equals(equipo1.getNombreEquipo())) {
-//            if (golesEquipo1 > golesEquipo2) {
-//                return ResultadoEnum.GANADOR;
-//            } else if (golesEquipo2 > golesEquipo1) {
-//                return ResultadoEnum.PERDEDOR;
-//            } else {
-//                return ResultadoEnum.EMPATE;
-//            }
-//        }
-//        else if(equipo.getNombreEquipo().equals(equipo2.getNombreEquipo())){
-//            if (golesEquipo1 > golesEquipo2) {
-//                return ResultadoEnum.PERDEDOR;
-//            } else if (golesEquipo2 > golesEquipo1) {
-//                return ResultadoEnum.GANADOR;
-//            } else {
-//                return ResultadoEnum.EMPATE;
-//            }
-//        }
-//        else{
-//            throw new EquipoIncorrectoException(equipo);
-//        }
-//    }
+    public ResultadoEnum getResultado() {
+        if(golesEquipo1>golesEquipo2){
+            return ResultadoEnum.GANA1;
+        } else if (golesEquipo2 > golesEquipo1){
+            return ResultadoEnum.GANA2;
+        } else {
+            return ResultadoEnum.EMPATE;
+        }
+    }
 }

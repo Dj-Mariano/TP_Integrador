@@ -19,9 +19,35 @@ public class Main {
         GestorDB DB = new GestorDB(config.get(0), config.get(1), config.get(2), lectorDeArchivos);
         DB.levantarPronosticos();
 
-        List<Pronostico> pronosticos = DB.getPronosticos();
-
-        System.out.println(pronosticos.size());
-
+        //imprimo datos de las rondas
+        for(Ronda r : rondas){
+            r.imprimirPartidos();
+        }
+        calcularPuntos(DB,rondas, config.get(3),config.get(4),config.get(5));
+        imprimirResultados(DB.getPersonas());
     }
+
+    private static void imprimirResultados(List<Persona> personas) {
+        for (Persona p : personas){
+            p.imprimirPuntaje();
+        }
+    }
+    private static void calcularPuntos(GestorDB baseDatos,List<Ronda> rondas, String puntosAcierto, String puntosRonda, String puntosFase) {
+        List<Pronostico> pronosticos = baseDatos.getPronosticos();
+        for (Pronostico p : pronosticos){
+            if(p.pronosticoAcertado()){
+                p.getPersona().sumarPuntos(Integer.parseInt(puntosAcierto));
+                p.getPersona().agregarAcierto();
+            }
+        }
+        List<Persona> personas = baseDatos.getPersonas();
+        for(Persona per : personas){
+            for (Ronda r : rondas){
+                if (baseDatos.acertoTodosPronosticosRonda(per,r.getNumeroRonda())){
+                    per.sumarPuntos(Integer.parseInt(puntosRonda));
+                }
+            }
+        }
+    }
+
 }

@@ -20,7 +20,6 @@ public class GestorDB {
         this.Pronosticos = new ArrayList<>();
         this.personas = new ArrayList<>();
     }
-
     public void levantarPronosticos() {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -62,7 +61,6 @@ public class GestorDB {
 
         }
     }
-
     private void agregarPronostico(Pronostico pronostico) {
         for(Pronostico p : this.Pronosticos){
             if(p.getFase().equals(pronostico.getFase())
@@ -73,7 +71,6 @@ public class GestorDB {
         }
         this.Pronosticos.add(pronostico);
     }
-
     private Persona obtenerPersona(String nombrePersona) {
         Persona persona = null;
 
@@ -89,8 +86,18 @@ public class GestorDB {
         }
         return persona;
     }
-
     public List<Pronostico> getPronosticos() {
         return Pronosticos;
+    }
+    public List<Persona> getPersonas() {
+        return personas;
+    }
+    public boolean acertoTodosPronosticosRonda(Persona p, int ronda){
+        //filtro los pronosticos que son de la perosna p
+        List<Pronostico> pronosticosFiltrado = this.Pronosticos.stream().filter(pronostico -> pronostico.getPersona().equals(p)).toList();
+        //vuelvo a filtrar los pronosticos que son de la ronda
+        pronosticosFiltrado = pronosticosFiltrado.stream().filter(pronostico -> pronostico.getRonda().getNumeroRonda() == ronda).toList();
+
+        return pronosticosFiltrado.stream().allMatch(pronostico -> pronostico.pronosticoAcertado());
     }
 }

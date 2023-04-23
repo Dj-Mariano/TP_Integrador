@@ -186,7 +186,7 @@ public class LectorDeArchivos {
                     fase.setRonda(aux);
                     fases.add(fase);
                 } else {
-                    System.out.println("Fase Existente");
+                    //System.out.println("Fase Existente");
                 }
             }
         } catch(CsvValidationException | IOException e){

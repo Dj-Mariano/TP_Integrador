@@ -11,9 +11,6 @@ public class Fase {
         this.rondas = new ArrayList<>();
     }
 
-    public int cantidadRondas(){
-        return rondas.size();
-    }
     public int getNumeroFase() {
         return numeroFase;
     }

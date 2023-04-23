@@ -2,28 +2,30 @@ package ArgentinaPrograma_TP_Final.modelo;
 
 public class Persona {
     private String nombre;
-    private double puntos;
+    private Integer puntos;
+    private Integer cantAciertos;
 
     public Persona() {
+        this.puntos = 0;
+        this.cantAciertos = 0;
     }
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
-    public void addPuntos(double puntos) {
-        this.puntos = this.puntos + puntos;
+    public void sumarPuntos(Integer puntosSuma) {
+        this.puntos = this.puntos + puntosSuma;
     }
-
-    public double getPuntos() {
-        return puntos;
+    public void agregarAcierto() {
+        this.cantAciertos++;
     }
-
-    public static void imprimirPuntaje(Persona pers){
+    public void imprimirPuntaje(){
         System.out.println("--------------------------------------------------");
-        System.out.println( "El pronóstico de "+ pers.getNombre() +" ha obtenido "+ pers.getPuntos()+ " puntos." );
+        System.out.println(nombre + " ha obtenido " + puntos + " puntos, y acertó: " + cantAciertos + " Resultados");
     }
 
     public String getNombre() {
         return nombre;
     }
+
 }
