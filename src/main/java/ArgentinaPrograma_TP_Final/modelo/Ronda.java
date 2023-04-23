@@ -1,5 +1,4 @@
 package ArgentinaPrograma_TP_Final.modelo;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -35,9 +34,9 @@ public class Ronda {
         Partido partido = null;
 
         for(Partido p : this.partidos){
-           if(p.juegan(equipo1,equipo2)){
-               partido = p;
-           }
+            if(p.juegan(equipo1,equipo2)){
+                partido = p;
+            }
         }
 
         if(partido == null){

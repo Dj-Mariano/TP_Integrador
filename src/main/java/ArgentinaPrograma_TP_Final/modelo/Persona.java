@@ -3,11 +3,8 @@ package ArgentinaPrograma_TP_Final.modelo;
 public class Persona {
     private String nombre;
     private double puntos;
-    private int cantAciertos;
 
     public Persona() {
-        this.puntos = 0.0;
-        this.cantAciertos = 0;
     }
     public void setNombre(String nombre) {
         this.nombre = nombre;

@@ -40,7 +40,7 @@ public class LectorDeArchivos {
             while ((fila = lector.readNext()) != null) {
                 if (existeEquipo(fila[2],equipos)==true) {
                     //throw new EquipoYaExistenteException(fila[2]);
-                    }
+                }
                 else {
                     Equipo equipo = new Equipo(fila[2], "Vacio");
                     equipos.add(equipo);
