@@ -23,7 +23,7 @@ public class Main {
         for(Ronda r : rondas){
             r.imprimirPartidos();
         }
-        calcularPuntos(DB,rondas, config.get(3),config.get(4),config.get(5));
+        calcularPuntos(DB,rondas,fases,config.get(3),config.get(4),config.get(5));
         imprimirResultados(DB.getPersonas());
     }
 
@@ -32,7 +32,7 @@ public class Main {
             p.imprimirPuntaje();
         }
     }
-    private static void calcularPuntos(GestorDB baseDatos,List<Ronda> rondas, String puntosAcierto, String puntosRonda, String puntosFase) {
+    private static void calcularPuntos(GestorDB baseDatos,List<Ronda> rondas,List<Fase> fases, String puntosAcierto, String puntosRonda, String puntosFase) {
         List<Pronostico> pronosticos = baseDatos.getPronosticos();
         for (Pronostico p : pronosticos){
             if(p.pronosticoAcertado()){
@@ -45,6 +45,11 @@ public class Main {
             for (Ronda r : rondas){
                 if (baseDatos.acertoTodosPronosticosRonda(per,r.getNumeroRonda())){
                     per.sumarPuntos(Integer.parseInt(puntosRonda));
+                }
+            }
+            for (Fase f : fases){
+                if (baseDatos.acertoTodosPronosticosFases(per,f.getNumeroFase())){
+                    per.sumarPuntos(Integer.parseInt(puntosFase));
                 }
             }
         }

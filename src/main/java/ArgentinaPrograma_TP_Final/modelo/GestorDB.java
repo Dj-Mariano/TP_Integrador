@@ -100,4 +100,12 @@ public class GestorDB {
 
         return pronosticosFiltrado.stream().allMatch(pronostico -> pronostico.pronosticoAcertado());
     }
+    public boolean acertoTodosPronosticosFases(Persona p, int fase){
+        //filtro los pronosticos que son de la perosna p
+        List<Pronostico> pronosticosFiltrado = this.Pronosticos.stream().filter(pronostico -> pronostico.getPersona().equals(p)).toList();
+        //vuelvo a filtrar los pronosticos que son de la fase
+        pronosticosFiltrado = pronosticosFiltrado.stream().filter(pronostico -> pronostico.getFase().getNumeroFase() == fase).toList();
+
+        return pronosticosFiltrado.stream().allMatch(pronostico -> pronostico.pronosticoAcertado());
+    }
 }
