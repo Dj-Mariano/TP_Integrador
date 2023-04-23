@@ -1,6 +1,6 @@
 package excepciones;
 
-import ArgentinaPrograma_TP_Final.modelo.modelo.modelo.Equipo;
+import ArgentinaPrograma_TP_Final.modelo.Equipo;
 
 public class EquipoIncorrectoException extends RuntimeException{
     public EquipoIncorrectoException(Equipo equipo){

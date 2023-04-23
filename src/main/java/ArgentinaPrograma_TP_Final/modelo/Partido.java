@@ -1,6 +1,5 @@
-package ArgentinaPrograma_TP_Final.modelo.modelo.modelo;
+package ArgentinaPrograma_TP_Final.modelo;
 
-import excepciones.EquipoIncorrectoException;
 import excepciones.ValorGolesException;
 
 public class Partido {
@@ -19,7 +18,8 @@ public class Partido {
         this.golesEquipo2=golesEquipo2;
     }
     public boolean juegan(String equipo1, String equipo2){
-
+        return (this.equipo1.getNombreEquipo().equals(equipo1) && this.equipo2.getNombreEquipo().equals(equipo2)) ||
+                (this.equipo1.getNombreEquipo().equals(equipo2) && this.equipo2.getNombreEquipo().equals(equipo1));
     }
     protected void setEquipo1(Equipo equipo1) {
         this.equipo1 = equipo1;
@@ -53,27 +53,28 @@ public class Partido {
             throw new ValorGolesException(golesEquipo2, equipo2.getNombreEquipo());
         }
     }
-    public ResultadoEnum Resultado(Equipo equipo) {
-        if (equipo.getNombreEquipo().equals(equipo1.getNombreEquipo())) {
-            if (golesEquipo1 > golesEquipo2) {
-                return ResultadoEnum.GANADOR;
-            } else if (golesEquipo2 > golesEquipo1) {
-                return ResultadoEnum.PERDEDOR;
-            } else {
-                return ResultadoEnum.EMPATE;
-            }
-        }
-        else if(equipo.getNombreEquipo().equals(equipo2.getNombreEquipo())){
-            if (golesEquipo1 > golesEquipo2) {
-                return ResultadoEnum.PERDEDOR;
-            } else if (golesEquipo2 > golesEquipo1) {
-                return ResultadoEnum.GANADOR;
-            } else {
-                return ResultadoEnum.EMPATE;
-            }
-        }
-        else{
-            throw new EquipoIncorrectoException(equipo);
-        }
-    }
+
+//    public ResultadoEnum Resultado(Equipo equipo) {
+//        if (equipo.getNombreEquipo().equals(equipo1.getNombreEquipo())) {
+//            if (golesEquipo1 > golesEquipo2) {
+//                return ResultadoEnum.GANADOR;
+//            } else if (golesEquipo2 > golesEquipo1) {
+//                return ResultadoEnum.PERDEDOR;
+//            } else {
+//                return ResultadoEnum.EMPATE;
+//            }
+//        }
+//        else if(equipo.getNombreEquipo().equals(equipo2.getNombreEquipo())){
+//            if (golesEquipo1 > golesEquipo2) {
+//                return ResultadoEnum.PERDEDOR;
+//            } else if (golesEquipo2 > golesEquipo1) {
+//                return ResultadoEnum.GANADOR;
+//            } else {
+//                return ResultadoEnum.EMPATE;
+//            }
+//        }
+//        else{
+//            throw new EquipoIncorrectoException(equipo);
+//        }
+//    }
 }

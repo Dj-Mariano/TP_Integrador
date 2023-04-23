@@ -1,7 +1,4 @@
-package ArgentinaPrograma_TP_Final.modelo.modelo.modelo;
-
-import java.util.ArrayList;
-import java.util.List;
+package ArgentinaPrograma_TP_Final.modelo;
 
 public class Persona {
     private String nombre;

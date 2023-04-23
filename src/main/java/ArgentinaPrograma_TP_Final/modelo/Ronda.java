@@ -1,19 +1,22 @@
-package ArgentinaPrograma_TP_Final.modelo.modelo.modelo;
-
-import excepciones.RondaNoExistenteException;
+package ArgentinaPrograma_TP_Final.modelo;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Ronda {
     private int numeroRonda;
+    private String fase;
     private List<Partido> partidos;
 
-    public Ronda(int numeroRonda){
+    public Ronda(int numeroRonda, String fase){
         this.numeroRonda = numeroRonda;
+        this.fase = fase;
         this.partidos = new ArrayList<>();
     }
 
+    public String getFase() {
+        return fase;
+    }
     public int getNumeroRonda() {
         return numeroRonda;
     }
@@ -31,7 +34,7 @@ public class Ronda {
     public Partido obtenerPartido(String equipo1, String equipo2) {
         Partido partido = null;
 
-        for(partido p : this.partidos){
+        for(Partido p : this.partidos){
            if(p.juegan(equipo1,equipo2)){
                partido = p;
            }

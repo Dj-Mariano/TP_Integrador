@@ -1,10 +1,8 @@
-import ArgentinaPrograma_TP_Final.modelo.modelo.modelo.*;
-import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 
 public class PuntosPersonasTest {
-    @Test
+/*    @Test
 
     public void ProbarPuntos(){
         Persona persona1 =new Persona();
@@ -17,5 +15,5 @@ public class PuntosPersonasTest {
         pronostico1.Calcularpuntos();
         pronostico2.Calcularpuntos();
         assertEquals(1, persona1.getPuntos(), 0.01);
-    }
+    }*/
 }

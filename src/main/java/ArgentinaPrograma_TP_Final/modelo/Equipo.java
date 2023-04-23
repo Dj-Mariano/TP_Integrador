@@ -1,4 +1,4 @@
-package ArgentinaPrograma_TP_Final.modelo.modelo.modelo;
+package ArgentinaPrograma_TP_Final.modelo;
 
 public class Equipo {
     private String nombreEquipo;
