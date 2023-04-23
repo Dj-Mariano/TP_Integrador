@@ -7,6 +7,7 @@ import com.opencsv.CSVReaderBuilder;
 import com.opencsv.exceptions.CsvValidationException;
 import excepciones.EquipoYaExistenteException;
 import excepciones.RondaNoExistenteException;
+
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -15,31 +16,12 @@ import java.util.List;
 public class LectorDeArchivos {
     private String rutaPronosticos;
     private String rutaResultados;
-    List<Ronda> rondas;
-    List<Fase> fases;
 
     public LectorDeArchivos(String rutaPronosticos, String rtaResultados) {
         this.rutaPronosticos = rutaPronosticos;
         this.rutaResultados = rtaResultados;
     }
 
-    public Fase obtenerFase(int numeroFase) {
-        Fase fase = null;
-
-        for(Fase f : this.fases){
-            if(f.getNumeroFase() == numeroFase){
-                fase = f;
-            }
-        }
-        if(fase == null){
-            throw new RuntimeException("La fase no existe");
-        }
-
-        return fase;
-    }
-    public String getConfiguracion(){
-        return "algo";
-    }
     public List<Equipo> getEquipos() {
         List<Equipo> equipos = new ArrayList<>();
 
@@ -201,6 +183,8 @@ public class LectorDeArchivos {
         }
         return pronosticos;
     }
+
+    List<Ronda> rondas;
     public List<Ronda> getRondas(List<Partido> partidos) {
         rondas = new ArrayList<>();
 
