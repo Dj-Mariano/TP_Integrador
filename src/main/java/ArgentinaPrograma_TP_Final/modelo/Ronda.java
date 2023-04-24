@@ -6,17 +6,17 @@ import java.util.List;
 
 public class Ronda {
     private int numeroRonda;
-    private String fase;
+    private int numerofase;
     private List<Partido> partidos;
 
-    public Ronda(int numeroRonda, String fase){
+    public Ronda(int numeroRonda, int numerofase){
         this.numeroRonda = numeroRonda;
-        this.fase = fase;
+        this.numerofase = numerofase;
         this.partidos = new ArrayList<>();
     }
 
-    public String getFase() {
-        return fase;
+    public int getFase() {
+        return numerofase;
     }
     public int getNumeroRonda() {
         return numeroRonda;

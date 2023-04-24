@@ -137,7 +137,7 @@ public class LectorDeArchivos {
             while ((fila = lector.readNext()) != null) {
 
                 List<Partido> aux = new ArrayList<>();
-                Ronda ronda = new Ronda(Integer.parseInt(fila[1]), fila[0]);
+                Ronda ronda = new Ronda(Integer.parseInt(fila[1]), Integer.parseInt(fila[0]));
 
                 if (!existeRonda(fila[1], rondas)) {
                     for (int i = 0; i < partidos.size(); i++) {
@@ -194,8 +194,9 @@ public class LectorDeArchivos {
                     List<Ronda> aux = new ArrayList<>();
                     Fase fase = new Fase(Integer.parseInt(fila[0]));
                     for (Ronda ronda : rondas) {
-                        if (ronda.getFase().equals(fila[0]))
+                        if (String.valueOf(ronda.getFase()).equals(fila[0])) {
                             aux.add(ronda);
+                        }
                     }
                     fase.setRonda(aux);
                     fases.add(fase);

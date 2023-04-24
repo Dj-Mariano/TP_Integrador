@@ -27,5 +27,11 @@ public class Persona {
     public String getNombre() {
         return nombre;
     }
+    public Integer getPuntos() {
+        return puntos;
+    }
 
+    public Integer getCantAciertos() {
+        return cantAciertos;
+    }
 }

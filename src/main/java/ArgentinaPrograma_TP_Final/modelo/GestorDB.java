@@ -100,7 +100,7 @@ public class GestorDB {
         return personas;
     }
     public boolean acertoTodosPronosticosRonda(Persona p, int ronda){
-        //filtro los pronosticos que son de la perosna p
+        //filtro los pronosticos que son de la persona p
         List<Pronostico> pronosticosFiltrado = this.Pronosticos.stream().filter(pronostico -> pronostico.getPersona().equals(p)).toList();
         //vuelvo a filtrar los pronosticos que son de la ronda
         pronosticosFiltrado = pronosticosFiltrado.stream().filter(pronostico -> pronostico.getRonda().getNumeroRonda() == ronda).toList();

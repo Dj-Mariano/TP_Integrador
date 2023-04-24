@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d7e6d9e7-2116-4bb6-b567-99f8113eecad" name="Changes" comment="excepcioness">
+    <list default="true" id="d7e6d9e7-2116-4bb6-b567-99f8113eecad" name="Changes" comment="correcion de error en tests">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/PartidosTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PartidosTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ArgentinaPrograma_TP_Final/modelo/GestorDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ArgentinaPrograma_TP_Final/modelo/GestorDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ArgentinaPrograma_TP_Final/modelo/LectorDeArchivos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ArgentinaPrograma_TP_Final/modelo/LectorDeArchivos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ArgentinaPrograma_TP_Final/modelo/Persona.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ArgentinaPrograma_TP_Final/modelo/Persona.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ArgentinaPrograma_TP_Final/modelo/Ronda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ArgentinaPrograma_TP_Final/modelo/Ronda.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/PuntosPersonasTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PuntosPersonasTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,11 +27,11 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -126,6 +130,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PuntosPersonasTest.ProbarSumaDePuntosYAciertos" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TP_Integrador" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="PuntosPersonasTest" />
+      <option name="METHOD_NAME" value="ProbarSumaDePuntosYAciertos" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <method v="2">
         <option name="Make" enabled="true" />
@@ -140,6 +154,7 @@
     <list>
       <item itemvalue="Application.Main" />
       <item itemvalue="JUnit.PartidosTest" />
+      <item itemvalue="JUnit.PuntosPersonasTest.ProbarSumaDePuntosYAciertos" />
       <item itemvalue="JUnit.PartidosTest.probarResultadoPerdedor2" />
       <item itemvalue="JUnit.PartidosTest.probarResultadoEmpate" />
       <item itemvalue="JUnit.PartidosTest.probarResultadoGanador1" />
@@ -147,6 +162,7 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.PuntosPersonasTest.ProbarSumaDePuntosYAciertos" />
         <item itemvalue="JUnit.PartidosTest.probarResultadoGanador1" />
         <item itemvalue="JUnit.PuntosPersonasTest.ProbarPuntos" />
         <item itemvalue="JUnit.PartidosTest.probarResultadoEmpate" />
@@ -177,7 +193,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682318734151</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="correcion de error en tests">
+      <created>1682359644578</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1682359644578</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -195,6 +218,7 @@
     <MESSAGE value="excepciones" />
     <MESSAGE value="excepciones 2" />
     <MESSAGE value="excepcioness" />
-    <option name="LAST_COMMIT_MESSAGE" value="excepcioness" />
+    <MESSAGE value="correcion de error en tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="correcion de error en tests" />
   </component>
 </project>
