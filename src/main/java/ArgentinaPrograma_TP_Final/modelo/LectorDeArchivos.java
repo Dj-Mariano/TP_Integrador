@@ -134,32 +134,33 @@ public class LectorDeArchivos {
                     .build();
 
             String[] fila;
-
             while ((fila = lector.readNext()) != null) {
 
-                if (existeRonda(fila[1], rondas)) {
-                    try {
-                    } catch (RondaYaExistenteException e) {
-                        throw new RondaYaExistenteException(Integer.parseInt(fila[1]));
-                    }
+                List<Partido> aux = new ArrayList<>();
+                Ronda ronda = new Ronda(Integer.parseInt(fila[1]), fila[0]);
 
-                } else {
-                    List<Partido> aux = new ArrayList<>();
-                    Ronda ronda = new Ronda(Integer.parseInt(fila[1]), fila[0]);
+                if (!existeRonda(fila[1], rondas)) {
                     for (int i = 0; i < partidos.size(); i++) {
                         if (partidos.get(i).getRonda().equals(fila[1]))
                             aux.add(partidos.get(i));
                     }
                     ronda.setPartidos(aux);
                     rondas.add(ronda);
+                } else if (existeRonda(fila[1], rondas)) {
+                    for (int i = 0; i < aux.size(); i++) {
+                        if (partidos.get(i).equals(aux.get(i)))
+                            throw new RondaYaExistenteException(Integer.parseInt(fila[1]));
+                    }
                 }
-            }
+                }
 
-        } catch(CsvValidationException | IOException e){
-            throw new RuntimeException(e);
+
+            } catch(CsvValidationException | IOException e){
+                throw new RuntimeException(e);
+            }
+            return rondas;
         }
-        return rondas;
-    }
+
     private boolean existeRonda(String nombreRonda, List<Ronda> listRonda){
         int cont = 0;
         for(Ronda r : listRonda) {

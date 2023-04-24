@@ -15,7 +15,7 @@ public class Pronostico {
         this.partido = partido;
         this.resultadoEnum=resultadoEnum;
     }
-
+    public Partido getPartido() { return partido; }
     public Fase getFase() {
         return fase;
     }

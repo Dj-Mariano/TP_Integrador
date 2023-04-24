@@ -1,4 +1,6 @@
 package ArgentinaPrograma_TP_Final.modelo;
+import excepciones.PartidoNoExistenteException;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,6 +20,9 @@ public class Ronda {
     }
     public int getNumeroRonda() {
         return numeroRonda;
+    }
+    public List<Partido> getPartidos() {
+        return partidos;
     }
     public void setPartidos(List<Partido> partidos) {
         this.partidos = partidos;
@@ -39,7 +44,7 @@ public class Ronda {
         }
 
         if(partido == null){
-            throw new RuntimeException("El partido no existe");
+            throw new PartidoNoExistenteException(partido);
         }
         return partido;
     }

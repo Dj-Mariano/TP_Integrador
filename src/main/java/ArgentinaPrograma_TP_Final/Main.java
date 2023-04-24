@@ -20,6 +20,7 @@ public class Main {
         GestorDB DB = new GestorDB(config.get(0), config.get(1), config.get(2), lectorDeArchivos);
         DB.levantarPronosticos();
 
+
         //imprimo datos de las rondas
         for(Ronda r : rondas){
             r.imprimirPartidos();

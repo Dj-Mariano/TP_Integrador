@@ -2,6 +2,8 @@ package ArgentinaPrograma_TP_Final.modelo;
 
 import excepciones.ValorGolesException;
 
+import java.util.List;
+
 public class Partido {
     private Equipo equipo1;
     private Equipo equipo2;

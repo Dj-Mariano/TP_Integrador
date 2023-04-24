@@ -4,15 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d7e6d9e7-2116-4bb6-b567-99f8113eecad" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/excepciones/FaseNoExistenteException.java" afterDir="false" />
+    <list default="true" id="d7e6d9e7-2116-4bb6-b567-99f8113eecad" name="Changes" comment="excepciones 2">
+      <change afterPath="$PROJECT_DIR$/src/main/java/excepciones/PartidoNoExistenteException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/excepciones/PronosticoYaExistenteException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/excepciones/ResultadoNoEstablecidoException.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/excepciones/RondaYaExistenteException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ArgentinaPrograma_TP_Final/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ArgentinaPrograma_TP_Final/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ArgentinaPrograma_TP_Final/modelo/GestorDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ArgentinaPrograma_TP_Final/modelo/GestorDB.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ArgentinaPrograma_TP_Final/modelo/LectorDeArchivos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ArgentinaPrograma_TP_Final/modelo/LectorDeArchivos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ArgentinaPrograma_TP_Final/modelo/Partido.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ArgentinaPrograma_TP_Final/modelo/Partido.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ArgentinaPrograma_TP_Final/modelo/Pronostico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ArgentinaPrograma_TP_Final/modelo/Pronostico.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ArgentinaPrograma_TP_Final/modelo/Ronda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ArgentinaPrograma_TP_Final/modelo/Ronda.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/excepciones/RondaNoExistenteException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/PartidosTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PartidosTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,6 +159,30 @@
       <option name="presentableId" value="Default" />
       <updated>1681777261045</updated>
     </task>
+    <task id="LOCAL-00001" summary="excepciones">
+      <created>1682301440402</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1682301440402</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="excepciones" />
+    <MESSAGE value="excepciones 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="excepciones 2" />
   </component>
 </project>

@@ -1,4 +1,7 @@
 package ArgentinaPrograma_TP_Final.modelo;
+import excepciones.PronosticoYaExistenteException;
+import excepciones.ResultadoNoEstablecidoException;
+
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -47,7 +50,7 @@ public class GestorDB {
                 } else if (empata) {
                     resultado = ResultadoEnum.EMPATE;
                 } else {
-                    throw new RuntimeException("No se establecio un resultado");
+                    throw new ResultadoNoEstablecidoException();
                 }
 
                 Pronostico pronostico = new Pronostico(fase, ronda, persona, partido, resultado);
@@ -63,10 +66,14 @@ public class GestorDB {
     }
     private void agregarPronostico(Pronostico pronostico) {
         for(Pronostico p : this.Pronosticos){
-            if(p.getFase().equals(pronostico.getFase())
-                    && p.getRonda().equals(pronostico.getRonda())
-                    && p.getPersona().equals(pronostico.getPersona())){
-                //throw new RuntimeException("Ya hay un pronostico de x persona para el partido y");
+            if(p.getPersona().equals(pronostico.getPersona())
+                    && ((p.getPartido().getEquipo1().equals(pronostico.getPartido().getEquipo1())
+                    && p.getPartido().getEquipo2().equals(pronostico.getPartido().getEquipo2()))
+                    || (p.getPartido().getEquipo1().equals(pronostico.getPartido().getEquipo2())
+                    &&p.getPartido().getEquipo2().equals(pronostico.getPartido().getEquipo1())))){
+                throw new PronosticoYaExistenteException(p.getPersona().getNombre(),
+                        p.getPartido().getEquipo1().getNombreEquipo(),
+                        p.getPartido().getEquipo2().getNombreEquipo());
             }
         }
         this.Pronosticos.add(pronostico);
