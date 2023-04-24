@@ -27,6 +27,7 @@ public class Main {
         }
         calcularPuntos(DB,rondas,fases,config.get(3),config.get(4),config.get(5));
         imprimirResultados(DB.getPersonas());
+
     }
 
     private static void imprimirResultados(List<Persona> personas) {

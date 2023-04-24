@@ -160,7 +160,6 @@ public class LectorDeArchivos {
             }
             return rondas;
         }
-
     private boolean existeRonda(String nombreRonda, List<Ronda> listRonda){
         int cont = 0;
         for(Ronda r : listRonda) {
@@ -191,6 +190,7 @@ public class LectorDeArchivos {
             String[] fila;
 
             while ((fila = lector.readNext()) != null) {
+                if(!existeFase(fila[0], fases)) {
                     List<Ronda> aux = new ArrayList<>();
                     Fase fase = new Fase(Integer.parseInt(fila[0]));
                     for (Ronda ronda : rondas) {
@@ -199,6 +199,7 @@ public class LectorDeArchivos {
                     }
                     fase.setRonda(aux);
                     fases.add(fase);
+                }
             }
 
         } catch(CsvValidationException | IOException e){
