@@ -4,18 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d7e6d9e7-2116-4bb6-b567-99f8113eecad" name="Changes" comment="excepciones 2">
-      <change afterPath="$PROJECT_DIR$/src/main/java/excepciones/PartidoNoExistenteException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/excepciones/PronosticoYaExistenteException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/excepciones/ResultadoNoEstablecidoException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/excepciones/RondaYaExistenteException.java" afterDir="false" />
+    <list default="true" id="d7e6d9e7-2116-4bb6-b567-99f8113eecad" name="Changes" comment="excepcioness">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ArgentinaPrograma_TP_Final/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ArgentinaPrograma_TP_Final/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ArgentinaPrograma_TP_Final/modelo/GestorDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ArgentinaPrograma_TP_Final/modelo/GestorDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ArgentinaPrograma_TP_Final/modelo/LectorDeArchivos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ArgentinaPrograma_TP_Final/modelo/LectorDeArchivos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ArgentinaPrograma_TP_Final/modelo/Partido.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ArgentinaPrograma_TP_Final/modelo/Partido.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ArgentinaPrograma_TP_Final/modelo/Pronostico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ArgentinaPrograma_TP_Final/modelo/Pronostico.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ArgentinaPrograma_TP_Final/modelo/Ronda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ArgentinaPrograma_TP_Final/modelo/Ronda.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/PartidosTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PartidosTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +22,19 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="b57511b4-6401-4b83-8aca-1c0bf2c9b734" />
+        <option name="url" value="https://github.com/Dj-Mariano/TP_Integrador.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -143,9 +147,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.PartidosTest.probarResultadoGanador1" />
         <item itemvalue="JUnit.PuntosPersonasTest.ProbarPuntos" />
         <item itemvalue="JUnit.PartidosTest.probarResultadoEmpate" />
-        <item itemvalue="JUnit.PartidosTest.probarResultadoGanador1" />
         <item itemvalue="JUnit.PartidosTest.probarResultadoPerdedor2" />
       </list>
     </recent_temporary>
@@ -166,7 +170,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682301440402</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="excepcioness">
+      <created>1682318734151</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1682318734151</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -183,6 +194,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="excepciones" />
     <MESSAGE value="excepciones 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="excepciones 2" />
+    <MESSAGE value="excepcioness" />
+    <option name="LAST_COMMIT_MESSAGE" value="excepcioness" />
   </component>
 </project>

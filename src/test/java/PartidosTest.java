@@ -5,7 +5,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-public class PartidoTest {
+public class PartidosTest {
     private Equipo equipo1;
     private Equipo equipo2;
     private Partido partido;
@@ -43,39 +43,27 @@ public class PartidoTest {
 
 
     //Test anteriores arreglados
-    @Test
-    public void probarResultadoPerdedor1(){
-        Equipo equipo1= new Equipo("Pais 1", "1");
-        Equipo equipo2= new Equipo("Pais 2", "2");
-        Partido partido = new Partido(equipo1, equipo2, 1,2 );
-        assertEquals (ResultadoEnum.GANA2, partido.getResultado());
-    }
-    @Test
-    public void probarResultadoPerdedor2(){
-        Equipo equipo1= new Equipo("Pais 1", "1");
-        Equipo equipo2= new Equipo("Pais 2", "2");
-        Partido partido = new Partido(equipo1, equipo2, 2,1 );
-        assertEquals (ResultadoEnum.GANA1, partido.getResultado());
-    }
+
+
     @Test
     public void probarResultadoGanador1(){
-        Equipo equipo1= new Equipo("Pais 1", "1");
-        Equipo equipo2= new Equipo("Pais 2", "2");
-        Partido partido = new Partido(equipo1, equipo2, 2,1 );
+         equipo1= new Equipo("Pais 1", "1");
+         equipo2= new Equipo("Pais 2", "2");
+         partido = new Partido(equipo1, equipo2, 2, 1);
         assertEquals (ResultadoEnum.GANA1, partido.getResultado());
     }
     @Test
     public void probarResultadoGanador2(){
-        Equipo equipo1= new Equipo("Pais 1", "1");
-        Equipo equipo2= new Equipo("Pais 2", "2");
-        Partido partido = new Partido(equipo1, equipo2, 1,2 );
+         equipo1= new Equipo("Pais 1", "1");
+         equipo2= new Equipo("Pais 2", "2");
+         partido = new Partido(equipo1, equipo2, 1,2 );
         assertEquals (ResultadoEnum.GANA2, partido.getResultado());
     }
     @Test
     public void probarResultadoEmpate(){
-        Equipo equipo1= new Equipo("Pais 1", "1");
-        Equipo equipo2= new Equipo("Pais 2", "2");
-        Partido partido = new Partido(equipo1, equipo2, 2,2 );
+         equipo1= new Equipo("Pais 1", "1");
+         equipo2= new Equipo("Pais 2", "2");
+         partido = new Partido(equipo1, equipo2, 2,2 );
         assertEquals (ResultadoEnum.EMPATE, partido.getResultado());
     }
 }
