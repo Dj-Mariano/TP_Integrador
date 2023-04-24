@@ -4,31 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="028749ad-d6fd-47c6-a625-25e4cabe5c64" name="Changes" comment="">
-<<<<<<< HEAD
-=======
-      <change afterPath="$PROJECT_DIR$/src/main/java/excepciones/EquipoYaExistenteException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/excepciones/RondaNoExistenteException.java" afterDir="false" />
->>>>>>> 19a5c07ecc3ef81e75ac4fba8ffebede49d546df
+    <list default="true" id="d7e6d9e7-2116-4bb6-b567-99f8113eecad" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/excepciones/FaseNoExistenteException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/excepciones/RondaYaExistenteException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ArgentinaPrograma_TP_Final/modelo/modelo/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ArgentinaPrograma_TP_Final/modelo/modelo/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ArgentinaPrograma_TP_Final/modelo/modelo/modelo/Fase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ArgentinaPrograma_TP_Final/modelo/modelo/modelo/Fase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ArgentinaPrograma_TP_Final/modelo/modelo/modelo/GestorDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ArgentinaPrograma_TP_Final/modelo/modelo/modelo/GestorDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ArgentinaPrograma_TP_Final/modelo/modelo/modelo/LectorDeArchivos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ArgentinaPrograma_TP_Final/modelo/modelo/modelo/LectorDeArchivos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ArgentinaPrograma_TP_Final/modelo/modelo/modelo/Partido.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ArgentinaPrograma_TP_Final/modelo/modelo/modelo/Partido.java" afterDir="false" />
-<<<<<<< HEAD
-      <change beforePath="$PROJECT_DIR$/src/main/java/ArgentinaPrograma_TP_Final/modelo/modelo/modelo/Pronostico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ArgentinaPrograma_TP_Final/modelo/modelo/modelo/Pronostico.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ArgentinaPrograma_TP_Final/modelo/modelo/modelo/ResultadoEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ArgentinaPrograma_TP_Final/modelo/modelo/modelo/ResultadoEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ArgentinaPrograma_TP_Final/modelo/modelo/modelo/Ronda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ArgentinaPrograma_TP_Final/modelo/modelo/modelo/Ronda.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/configuracion.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/configuracion.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/resultados.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/resultados.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ArgentinaPrograma_TP_Final/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ArgentinaPrograma_TP_Final/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ArgentinaPrograma_TP_Final/modelo/LectorDeArchivos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ArgentinaPrograma_TP_Final/modelo/LectorDeArchivos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ArgentinaPrograma_TP_Final/modelo/Ronda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ArgentinaPrograma_TP_Final/modelo/Ronda.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/excepciones/RondaNoExistenteException.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/PartidosTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PartidosTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/PuntosPersonasTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PuntosPersonasTest.java" afterDir="false" />
-=======
-      <change beforePath="$PROJECT_DIR$/src/main/java/ArgentinaPrograma_TP_Final/modelo/modelo/modelo/Ronda.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ArgentinaPrograma_TP_Final/modelo/modelo/modelo/Ronda.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/excepciones/EquipoIncorrectoException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/excepciones/EquipoIncorrectoException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/excepciones/ValorGolesException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/excepciones/ValorGolesException.java" afterDir="false" />
->>>>>>> 19a5c07ecc3ef81e75ac4fba8ffebede49d546df
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,60 +45,36 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
-  }
-<<<<<<< HEAD
-}]]></component>
+        &quot;keyToString&quot;: {
+        &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+        &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
+        }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\maria\OneDrive\DOCUMENTOS MARIANO\B-JAVA UTN\TP Integrador Java\TP_Integrador\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ArgentinaPrograma_TP_Final.Main">
-    <configuration name="ArgentinaPrograma_TP_Final.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" activateToolWindowBeforeRun="false" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ArgentinaPrograma_TP_Final.Main" />
       <module name="TP_Integrador" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ArgentinaPrograma_TP_Final.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+      <option name="PROGRAM_PARAMETERS" value="&quot;C:\Users\victo\IdeaProjects\TP_Integrador1\src\main\resources\config - Hoja 1.csv&quot; &quot;C:\Users\victo\IdeaProjects\TP_Integrador1\src\main\resources\resultados.csv&quot;" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ArgentinaPrograma_TP_Final.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ArgentinaPrograma_TP_Final.Main" />
+    <configuration name="PartidosTest" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <module name="TP_Integrador" />
-      <option name="PROGRAM_PARAMETERS" value="&quot;C:\Users\maria\OneDrive\DOCUMENTOS MARIANO\B-JAVA UTN\TP Integrador Java\TP_Integrador\src\main\resources\configuracion.csv&quot; &quot;C:\Users\maria\OneDrive\DOCUMENTOS MARIANO\B-JAVA UTN\TP Integrador Java\TP_Integrador\src\main\resources\resultados.csv&quot;" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="ArgentinaPrograma_TP_Final.modelo.modelo.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ArgentinaPrograma_TP_Final.modelo.modelo.Main" />
-=======
-}</component>
-  <component name="RunManager">
-    <configuration name="PartidosTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
->>>>>>> 19a5c07ecc3ef81e75ac4fba8ffebede49d546df
-      <module name="TP_Integrador" />
-      <option name="PROGRAM_PARAMETERS" value="&quot;C:\Users\maria\OneDrive\DOCUMENTOS MARIANO\B-JAVA UTN\TP Integrador Java\TP_Integrador\src\main\resources\configuracion.csv&quot; &quot;C:\Users\maria\OneDrive\DOCUMENTOS MARIANO\B-JAVA UTN\TP Integrador Java\TP_Integrador\src\main\resources\resultados.csv&quot;" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ArgentinaPrograma_TP_Final.modelo.modelo.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="PartidosTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -170,33 +130,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-<<<<<<< HEAD
     <list>
-      <item itemvalue="Application.ArgentinaPrograma_TP_Final.Main" />
+      <item itemvalue="Application.Main" />
+      <item itemvalue="JUnit.PartidosTest" />
+      <item itemvalue="JUnit.PartidosTest.probarResultadoPerdedor2" />
       <item itemvalue="JUnit.PartidosTest.probarResultadoEmpate" />
       <item itemvalue="JUnit.PartidosTest.probarResultadoGanador1" />
       <item itemvalue="JUnit.PuntosPersonasTest.ProbarPuntos" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ArgentinaPrograma_TP_Final.Main" />
-        <item itemvalue="Application.ArgentinaPrograma_TP_Final.Main" />
-=======
-    <recent_temporary>
-      <list>
-        <item itemvalue="JUnit.PartidosTest" />
         <item itemvalue="JUnit.PuntosPersonasTest.ProbarPuntos" />
         <item itemvalue="JUnit.PartidosTest.probarResultadoEmpate" />
         <item itemvalue="JUnit.PartidosTest.probarResultadoGanador1" />
         <item itemvalue="JUnit.PartidosTest.probarResultadoPerdedor2" />
->>>>>>> 19a5c07ecc3ef81e75ac4fba8ffebede49d546df
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="028749ad-d6fd-47c6-a625-25e4cabe5c64" name="Changes" comment="" />
+      <changelist id="d7e6d9e7-2116-4bb6-b567-99f8113eecad" name="Changes" comment="" />
       <created>1681777261045</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />

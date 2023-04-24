@@ -26,7 +26,6 @@ public class Ronda {
         System.out.println("--------------------------------------------------");
         System.out.println("En la Ronda " + numeroRonda + " jugaron los siguentes equipos:");
         for(Partido p : partidos){
-
             System.out.println("Equipo 1: " + p.getEquipo1().getNombreEquipo() + " - Equipo 2: " + p.getEquipo2().getNombreEquipo());
         }
     }

@@ -4,6 +4,9 @@ import com.opencsv.CSVParserBuilder;
 import com.opencsv.CSVReader;
 import com.opencsv.CSVReaderBuilder;
 import com.opencsv.exceptions.CsvValidationException;
+import excepciones.EquipoYaExistenteException;
+import excepciones.FaseNoExistenteException;
+import excepciones.RondaYaExistenteException;
 
 import java.io.FileReader;
 import java.io.IOException;
@@ -20,6 +23,7 @@ public class LectorDeArchivos {
         this.rutaConfiguracion = rutaPronosticos;
         this.rutaResultados = rtaResultados;
     }
+
     public List<Equipo> getEquipos() {
         List<Equipo> equipos = new ArrayList<>();
 
@@ -36,17 +40,23 @@ public class LectorDeArchivos {
                     .build();
 
             String[] fila;
-
             while ((fila = lector.readNext()) != null) {
+
                 if (existeEquipo(fila[2],equipos)==true) {
-                    //throw new EquipoYaExistenteException(fila[2]);
+                    try {
+                    } catch (EquipoYaExistenteException e) {
+                        throw new EquipoYaExistenteException((fila[2]));
+                    }
                 }
                 else {
                     Equipo equipo = new Equipo(fila[2], "Vacio");
                     equipos.add(equipo);
                 }
                 if (existeEquipo(fila[5],equipos)==true) {
-                    //throw new EquipoYaExistenteException(fila[2]);
+                    try {
+                    } catch (EquipoYaExistenteException e) {
+                        throw new EquipoYaExistenteException((fila[5]));
+                    }
                 }
                 else {
                     Equipo equipo = new Equipo(fila[5], "Vacio");
@@ -73,7 +83,6 @@ public class LectorDeArchivos {
     }
     public List<Partido> getPartidos(List<Equipo> equipos) {
         List<Partido> partidos = new ArrayList<>();
-
         CSVParser parser = null;
         CSVReader lector = null;
 
@@ -127,20 +136,25 @@ public class LectorDeArchivos {
             String[] fila;
 
             while ((fila = lector.readNext()) != null) {
-                if (existeRonda(fila[1],rondas)==true) {
-                    //((System.out.println("Ronda Existente");
+
+                if (existeRonda(fila[1], rondas)) {
+                    try {
+                    } catch (RondaYaExistenteException e) {
+                        throw new RondaYaExistenteException(Integer.parseInt(fila[1]));
+                    }
+
                 } else {
                     List<Partido> aux = new ArrayList<>();
                     Ronda ronda = new Ronda(Integer.parseInt(fila[1]), fila[0]);
-                    for(int i=0;i<partidos.size();i++)
-                    {
-                        if(partidos.get(i).getRonda().equals(fila[1]))
+                    for (int i = 0; i < partidos.size(); i++) {
+                        if (partidos.get(i).getRonda().equals(fila[1]))
                             aux.add(partidos.get(i));
                     }
                     ronda.setPartidos(aux);
                     rondas.add(ronda);
                 }
             }
+
         } catch(CsvValidationException | IOException e){
             throw new RuntimeException(e);
         }
@@ -176,7 +190,6 @@ public class LectorDeArchivos {
             String[] fila;
 
             while ((fila = lector.readNext()) != null) {
-                if (!existeFase(fila[0], fases)) {
                     List<Ronda> aux = new ArrayList<>();
                     Fase fase = new Fase(Integer.parseInt(fila[0]));
                     for (Ronda ronda : rondas) {
@@ -185,10 +198,8 @@ public class LectorDeArchivos {
                     }
                     fase.setRonda(aux);
                     fases.add(fase);
-                } else {
-                    //System.out.println("Fase Existente");
-                }
             }
+
         } catch(CsvValidationException | IOException e){
             throw new RuntimeException(e);
         }
@@ -244,8 +255,9 @@ public class LectorDeArchivos {
         }
 
         if(fase == null){
-            throw new RuntimeException("la fase no existe");
+            throw new FaseNoExistenteException(numeroFase);
         }
         return fase;
     }
+
 }
